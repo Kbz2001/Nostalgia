@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
+@Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class Core {
     @EventHandler
     public void preinit(FMLPreInitializationEvent e) {
@@ -19,11 +19,7 @@ public class Core {
     @EventHandler
     public void init(FMLInitializationEvent e) {
         EventBus eb = MinecraftForge.EVENT_BUS;
-
-
-
         ClientCommandHandler cch = ClientCommandHandler.instance;
-
 
     }
 
@@ -31,5 +27,4 @@ public class Core {
     public void postinit(FMLPostInitializationEvent e) {
 
     }
-
 }
