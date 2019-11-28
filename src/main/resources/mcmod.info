@@ -1,0 +1,16 @@
+[
+{
+  "modid": "nostalgia",
+  "name": "Nostalgia",
+  "description": "Hypixel Mod that Enhances Gameplay!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Kbz & Nora"],
+  "credits": "Kbz, Nora, everyone who contributed suggestions, and the Forge guys!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
