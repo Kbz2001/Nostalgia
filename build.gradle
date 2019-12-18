@@ -54,6 +54,7 @@ repositories {
 dependencies {
     compile "com.github.HypixelDev:PublicAPI:2.0.0"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compile files("libs/ChatCommandFixer.jar")
 }
 
 processResources
