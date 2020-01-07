@@ -1,7 +1,6 @@
 package me.kbz.nostalgia.commands;
 
 import me.kbz.nostalgia.Reference;
-import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
@@ -11,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rau extends CommandBase implements ICommand {
-    Minecraft mc = Reference.mc;
     @Override
     public String getCommandName() {
         return "nosrau";
@@ -36,6 +34,6 @@ public class Rau extends CommandBase implements ICommand {
 
     @Override
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
-        mc.thePlayer.sendChatMessage("Please respect all users on the Hypixel Network, thank you.");
+        Reference.mc.thePlayer.sendChatMessage("Please respect all users on the Hypixel Network, thank you.");
     }
 }

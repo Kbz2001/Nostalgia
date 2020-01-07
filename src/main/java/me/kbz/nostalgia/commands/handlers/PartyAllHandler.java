@@ -10,11 +10,9 @@ import java.util.Collection;
 
 public class PartyAllHandler {
 
-   public static Minecraft mc = Reference.mc;
-
     public static void PartyAll(ICommandSender sender) {
 
-        Collection<NetworkPlayerInfo> playersC = mc.getNetHandler().getPlayerInfoMap();
+        Collection<NetworkPlayerInfo> playersC = Reference.mc.getNetHandler().getPlayerInfoMap();
 
         playersC.forEach(loadedPlayer -> {
 

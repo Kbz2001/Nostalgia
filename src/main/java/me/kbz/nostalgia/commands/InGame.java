@@ -1,7 +1,6 @@
 package me.kbz.nostalgia.commands;
 
 import me.kbz.nostalgia.Reference;
-import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
@@ -10,9 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InGame extends CommandBase {
-
-    Minecraft mc = Reference.mc;
-
 
     @Override
     public String getCommandName() {
@@ -39,6 +35,6 @@ public class InGame extends CommandBase {
 
     @Override
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
-        mc.thePlayer.sendChatMessage("/r Sorry, I'm in game. I'll get back to you when I'm done.");
+        Reference.mc.thePlayer.sendChatMessage("/r Sorry, I'm in game. I'll get back to you when I'm done.");
     }
 }

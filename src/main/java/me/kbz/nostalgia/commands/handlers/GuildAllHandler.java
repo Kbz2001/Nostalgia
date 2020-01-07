@@ -9,11 +9,10 @@ import net.minecraft.command.ICommandSender;
 import java.util.Collection;
 
 public class GuildAllHandler {
-    public static Minecraft mc = Reference.mc;
 
     public static void GuildAll(ICommandSender sender) {
 
-        Collection<NetworkPlayerInfo> playersC = mc.getNetHandler().getPlayerInfoMap();
+        Collection<NetworkPlayerInfo> playersC = Reference.mc.getNetHandler().getPlayerInfoMap();
 
         playersC.forEach(loadedPlayer -> {
 
