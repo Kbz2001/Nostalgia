@@ -34,7 +34,7 @@ public class Help extends CommandBase {
 
     @Override
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
-        if(args.length == 1 && args[0].equalsIgnoreCase("help")) {
+        if (args.length == 1 && args[0].equalsIgnoreCase("help")) {
             sender.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + "Welcome to Nostalgia! Here is a list of commands!"
                     + "\n"
                     + EnumChatFormatting.AQUA
@@ -77,16 +77,14 @@ public class Help extends CommandBase {
                     + "Invites the entire lobby to your guild."
 
 
-
                     + "\n"
                     + EnumChatFormatting.AQUA
                     + "---------------------------------------------"
 
             ));
-        }
-        else {
+        } else {
             sender.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "Incorrect command format. The correct format is: "
-            + EnumChatFormatting.YELLOW + "/nostalgia help"));
+                    + EnumChatFormatting.YELLOW + "/nostalgia help"));
         }
     }
 }

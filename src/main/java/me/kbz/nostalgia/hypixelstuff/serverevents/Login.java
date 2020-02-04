@@ -9,13 +9,12 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class Login {
 
     @SubscribeEvent
-    public void onLogin(EntityJoinWorldEvent e)
-    {
+    public void onLogin(EntityJoinWorldEvent e) {
 
-        if(!Reference.mc.isSingleplayer() && ServerChecker.isHypixel && e.entity instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer)e.entity;
+        if (!Reference.mc.isSingleplayer() && ServerChecker.isHypixel && e.entity instanceof EntityPlayer) {
+            EntityPlayer player = (EntityPlayer) e.entity;
 
-            if(player.getName().equals(Reference.mc.thePlayer.getName()) && ServerChecker.counter == 0) {
+            if (player.getName().equals(Reference.mc.thePlayer.getName()) && ServerChecker.counter == 0) {
                 RunHelpHandler.runHelpCmd.schedule(new RunHelpHandler(), 2 * 1000);
                 ServerChecker.counter++;
 

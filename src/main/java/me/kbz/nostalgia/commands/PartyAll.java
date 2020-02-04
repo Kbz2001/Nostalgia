@@ -38,11 +38,11 @@ public class PartyAll extends CommandBase {
 
     @Override
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
-        if(args.length >= 1) {
+        if (args.length >= 1) {
             sender.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_RED + "Please use the correct command format!" + EnumChatFormatting.RESET + " /partyall"));
         }
 
-        if(args.length == 0) {
+        if (args.length == 0) {
             new Thread(() -> PartyAllHandler.PartyAll(sender)).start();
         }
     }

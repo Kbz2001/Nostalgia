@@ -38,7 +38,7 @@ public class Emojis extends CommandBase {
     @Override
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
         Minecraft mc = Reference.mc;
-        if(args.length == 0){
+        if (args.length == 0) {
             mc.thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GOLD + "Nostalgia " + EnumChatFormatting.GREEN + "has access to the following emotes in chat:"
                     + "\n"
                     + "<3 - \u2764"
@@ -73,13 +73,11 @@ public class Emojis extends CommandBase {
                     + "\n"
                     + EnumChatFormatting.RED + "Command Usage: /nosemoji [emoji]"));
         }
-        if(args.length == 1)
-        {
+        if (args.length == 1) {
 
             String emoji = args[0].toLowerCase();
 
-            switch(emoji)
-            {
+            switch (emoji) {
 
                 case "<3":
 

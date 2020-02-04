@@ -21,9 +21,7 @@ public class PartyAllHandler {
 
             try {
                 Thread.sleep(500L);
-            }
-
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         });

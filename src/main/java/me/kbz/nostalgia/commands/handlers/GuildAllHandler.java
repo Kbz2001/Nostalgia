@@ -21,9 +21,7 @@ public class GuildAllHandler {
 
             try {
                 Thread.sleep(500L);
-            }
-
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         });

@@ -14,11 +14,10 @@ public class AchievementMessage {
 
     @SubscribeEvent
     public void toggleAchMsg(InputEvent.KeyInputEvent e) {
-        if(KeyBindings.achMsgToggle.isPressed()){
-            if(achievementMessageProp.isDefault()){
+        if (KeyBindings.achMsgToggle.isPressed()) {
+            if (achievementMessageProp.isDefault()) {
                 achievementMessageProp.set(false);
-            }
-            else{
+            } else {
                 achievementMessageProp.set(true);
             }
             Reference.mc.thePlayer.addChatMessage(new ChatComponentText(getToggle()));
@@ -29,7 +28,7 @@ public class AchievementMessage {
     public void onAchGet(ClientChatReceivedEvent e) {
         String msg = e.message.getUnformattedText();
 
-        if(msg.contains(">>") && msg.toLowerCase().contains("achievement unlocked:") && msg.contains("<<") && achievementMessageProp.isDefault()) {
+        if (msg.contains(">>") && msg.toLowerCase().contains("achievement unlocked:") && msg.contains("<<") && achievementMessageProp.isDefault()) {
 
             String[] parts = msg.split(":");
 

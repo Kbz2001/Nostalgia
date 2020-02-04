@@ -14,11 +14,10 @@ public class NetworkLevelMessage {
 
     @SubscribeEvent
     public void toggleLvlMsg(InputEvent.KeyInputEvent e) {
-        if(KeyBindings.ntwkLvlToggle.isPressed()){
-            if(networkLevelProp.isDefault()){
+        if (KeyBindings.ntwkLvlToggle.isPressed()) {
+            if (networkLevelProp.isDefault()) {
                 networkLevelProp.set(false);
-            }
-            else{
+            } else {
                 networkLevelProp.set(true);
             }
             Reference.mc.thePlayer.addChatMessage(new ChatComponentText(getToggle()));
@@ -30,13 +29,14 @@ public class NetworkLevelMessage {
 
         String msg = e.message.getUnformattedText();
 
-        if(msg.toLowerCase().contains("you are now hypixel level") && networkLevelProp.isDefault()) {
+        if (msg.toLowerCase().contains("you are now hypixel level") && networkLevelProp.isDefault()) {
             String[] parts = msg.split("Level");
             String hypixelLevel = parts[1];
 
             Reference.mc.thePlayer.sendChatMessage("/gc >> Level Up! I am now Hypixel Level" + hypixelLevel + " <<");
         }
     }
+
     public static String getToggle() {
         return networkLevelProp.isDefault() ? EnumChatFormatting.GREEN + "Callout Level-Ups Enabled!" : EnumChatFormatting.RED + "Callout Level-Ups Disabled!";
     }

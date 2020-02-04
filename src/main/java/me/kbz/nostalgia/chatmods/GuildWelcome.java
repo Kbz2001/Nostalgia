@@ -14,11 +14,10 @@ public class GuildWelcome {
 
     @SubscribeEvent
     public void toggleAutoGuildWelcome(InputEvent.KeyInputEvent e) {
-        if(KeyBindings.gwToggle.isPressed()){
-            if(guildWelcomeProp.isDefault()){
+        if (KeyBindings.gwToggle.isPressed()) {
+            if (guildWelcomeProp.isDefault()) {
                 guildWelcomeProp.set(false);
-            }
-            else{
+            } else {
                 guildWelcomeProp.set(true);
             }
             Reference.mc.thePlayer.addChatMessage(new ChatComponentText(getGWToggle()));
@@ -29,7 +28,7 @@ public class GuildWelcome {
     public void onPlayerJoinGuild(ClientChatReceivedEvent e) {
         String msg = e.message.getUnformattedText();
 
-        if(msg.toLowerCase().contains("joined the guild!") && guildWelcomeProp.isDefault()) {
+        if (msg.toLowerCase().contains("joined the guild!") && guildWelcomeProp.isDefault()) {
 
             String[] parts = msg.split("joined");
             String usernameJoined = parts[0];
@@ -38,6 +37,7 @@ public class GuildWelcome {
 
         }
     }
+
     public static String getGWToggle() {
         return guildWelcomeProp.isDefault() ? EnumChatFormatting.GREEN + "Automated Guild Welcome Enabled!" : EnumChatFormatting.RED + "Automated Guild Welcome Disabled!";
     }
